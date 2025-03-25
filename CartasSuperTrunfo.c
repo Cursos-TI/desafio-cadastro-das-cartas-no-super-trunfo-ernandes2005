@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){ 
+    printf("Bem vindo ao jogo!:\n");
 
     //variaveis da carta 1//
     char estado1, codigo1[20], cidade1[50];
@@ -9,7 +10,7 @@ int main(){
 
     //variaveis da carta 2//
     char estado2, codigo2[20], cidade2[50];
-    int populacao2, pontosturisticos2;
+    int populacao2, pontosTuristicos2;
     float pib2, area2;
 
 
@@ -57,7 +58,7 @@ int main(){
     scanf ("%f", &pib2);
 
     printf ("pontosturisticos:\n");
-    scanf ("%d",&pontosturisticos2);
+    scanf ("%d",&pontosTuristicos2);
 
 return 0;
 
