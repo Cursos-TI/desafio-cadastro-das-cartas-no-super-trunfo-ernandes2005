@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){ 
-    printf("Bem vindo ao jogo!:\n");
+    printf("\nBem vindo ao jogo!:\n");
 
     //variaveis da carta 1//
     char estado1, codigo1[20], cidade1[50];
@@ -12,7 +12,7 @@ int main(){
     char estado2, codigo2[20], cidade2[50];
     int populacao2, pontosTuristicos2;
     float pib2, area2, densidade2, PibPerCapita2;
-
+  
 
     //**entrada de dados da carta 1**//
     printf ("**insira os dados da carta 1**:\n");
@@ -48,7 +48,7 @@ int main(){
     printf("PIB Per Capita 1: %.2f\n", PibPerCapita1);
 
     //**entrada de dados da carta 2**//
-    printf ("insira os dados da carta 2: \n");
+    printf ("\ninsira os dados da carta 2: \n");
     printf ("estado:\n");
     scanf (" %c", &estado2);
 
@@ -79,6 +79,16 @@ int main(){
     PibPerCapita2 = pib2 / (populacao2 + (populacao2 == 0));
     //imprimir resultado pib per capita 2//
     printf("PIB Per Capita 2: %.2f\n", PibPerCapita2);
+
+    //comparando as cartas 1 e 2//
+    printf("\nComparando o PIB das duas cartas:\n");
+
+    if (pib1 > pib2) {
+        printf("A carta 1 tem o maior PIB: %.2f\n", pib1);
+    } else {
+        printf("A carta 2 tem o maior PIB: %.2f\n", pib2);
+    }  
+    
 
 return 0;
 
