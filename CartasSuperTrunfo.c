@@ -38,7 +38,7 @@ int main(){
     scanf ("%d", &pontosTuristicos1);
 
     // Cálculo da densidade populacional 1//
-    densidade1 = populacao1 / (area1 + (area1 == 0));
+    densidade1 = (area1 != 0) ? populacao1 / area1 : 0;
     // Imprimindo o resultado da densidade populacional//
     printf("Densidade Populacional 1: %.2f hab/km²\n", densidade1);
 
@@ -71,7 +71,7 @@ int main(){
     scanf ("%d",&pontosTuristicos2);
 
     // Cálculo da densidade populacional 2//
-    densidade2 = populacao2 / area2 + (area2 == 0);
+    densidade2 = (area2 != 0) ? populacao2 / area2 : 0;
     // Imprimindo o resultado da densidade populacional
     printf("Densidade Populacional 2: %.2f hab/km²\n", densidade2);
 
@@ -88,6 +88,76 @@ int main(){
     } else {
         printf("A carta 2 tem o maior PIB: %.2f\n", pib2);
     }  
+    //#comparando atributos#//
+
+    int escolha;
+
+    printf("\n##COMPARANDO ATRIBUTOS##\n");
+    printf("Escolha um atributo para comparar:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - Densidade populacional\n");
+    printf("4 - Pib\n");
+    printf("5 - Pontos turísticos\n");
+    printf("Digite sua escolha: ");
+    scanf("%d", &escolha);
+
+    switch (escolha) {
+        case 1:
+            printf("\nPopulação - Carta 1: %d | Carta 2: %d\n", populacao1, populacao2);
+            if (populacao1 > populacao2)
+                printf("Resultado: Carta 1 tem maior população.\n");
+            else if (populacao2 > populacao1)
+                printf("Resultado: Carta 2 tem maior população.\n");
+            else
+                printf("Resultado: ambos tem a mesma população!\n");
+            break;
+
+        case 2:
+            printf("\nÁrea - Carta 1: %.2f | Carta 2: %.2f\n", area1, area2);
+            if (area1 > area2)
+                printf("Resultado: Carta 1 tem maior área.\n");
+            else if (area2 > area1)
+                printf("Resultado: Carta 2 tem maior área.\n");
+            else
+                printf("Resultado: ambos tem a mesma área!\n");
+            break;
+
+        case 3:
+            printf("\nDensidade - Carta 1: %.2f | Carta 2: %.2f\n", densidade1, densidade2);
+            if (densidade1 > densidade2)
+                printf("Resultado: Carta 1 tem maior densidade.\n");
+            else if (densidade2 > densidade1)
+                printf("Resultado: Carta 2 tem maior densidade.\n");
+            else
+                printf("Resultado:ambos tem a mesma densidade!\n");
+            break;
+
+        case 4:
+            printf("\nPib1 - Carta 1: %.2f | Carta 2: %.2f\n", pib1, pib2);
+            if (pib1 > pib2)
+                printf("Resultado: Carta 1 tem maior Pib.\n");
+            else if (pib2 > pib1)
+                printf("Resultado: Carta 2 tem maior Pib.\n");
+            else
+                printf("Resultado: ambos tem o mesmo pib!\n");
+            break;
+
+        case 5:
+            printf("\nPontos turísticos - Carta 1: %d | Carta 2: %d\n", pontosTuristicos1, pontosTuristicos2);
+            if (pontosTuristicos1 > pontosTuristicos2)
+                printf("Resultado: Carta 1 tem mais pontos turísticos.\n");
+            else if (pontosTuristicos2 > pontosTuristicos1)
+                printf("Resultado: Carta 2 tem mais pontos turísticos.\n");
+            else
+                printf("Resultado: ambos tem a mesma quantidade de pontos turisticos!\n");
+            break;
+
+        default:
+            printf("Opção inválida.\n");
+    }
+
+    
     
 
 return 0;
